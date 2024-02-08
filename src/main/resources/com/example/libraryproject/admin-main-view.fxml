@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.libraryproject.AdminMainController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Journal">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableBase" layoutX="-2.0" prefHeight="267.0" prefWidth="603.0">
+                          <columns>
+                            <TableColumn fx:id="columnId" prefWidth="62.400022864341736" text="id" />
+                            <TableColumn fx:id="columnCliendId" prefWidth="67.99994659423828" text="client_id" />
+                              <TableColumn fx:id="columnBookId" prefWidth="84.0" text="book_id" />
+                              <TableColumn fx:id="columnDateBeg" prefWidth="140.0" text="date_beg" />
+                              <TableColumn fx:id="columnDateEnd" prefWidth="117.5999755859375" text="date_end" />
+                              <TableColumn fx:id="columnDateRet" prefWidth="129.59994506835938" text="date_ret" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonThenBase" layoutX="498.0" layoutY="297.0" mnemonicParsing="false" text="Вперед" />
+                        <Button fx:id="buttonBackBase" layoutX="32.0" layoutY="297.0" mnemonicParsing="false" text="Назад" visible="false" />
+                        <Button fx:id="buttonToExelJournal" layoutX="262.0" layoutY="296.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="в Excel" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Clients">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableClients" layoutX="-2.0" prefHeight="267.0" prefWidth="603.0">
+                           <columns>
+                              <TableColumn fx:id="columnIdClients" prefWidth="62.400022864341736" text="id" />
+                              <TableColumn fx:id="columnFirstNameClients" prefWidth="74.39996337890625" text="first_name" />
+                              <TableColumn fx:id="columnLastNameClients" prefWidth="115.20001220703125" text="last_name" />
+                              <TableColumn fx:id="columnFatherNameClients" prefWidth="76.0" text="father_name" />
+                              <TableColumn fx:id="columnSeries" prefWidth="67.199951171875" text="series" />
+                              <TableColumn fx:id="columnNum" prefWidth="88.800048828125" text="num" />
+                              <TableColumn fx:id="columnLogin" prefWidth="113.59991455078125" text="login" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="buttonNextClients" layoutX="498.0" layoutY="297.0" mnemonicParsing="false" text="Вперед" />
+                        <Button fx:id="buttonBackClients" layoutX="32.0" layoutY="297.0" mnemonicParsing="false" text="Назад" visible="false" />
+                        <Button fx:id="buttonToExelClients" layoutX="262.0" layoutY="296.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="в Ecxel" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Books">
+               <content>
+                  <AnchorPane fx:id="buttonBooksToExel" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableBooks" layoutX="-2.0" layoutY="36.0" prefHeight="267.0" prefWidth="603.0">
+                           <columns>
+                              <TableColumn fx:id="columnIdBooks" prefWidth="75.0" text="id" />
+                              <TableColumn fx:id="columnTypeIdBooks" prefWidth="80.00000762939453" text="type_id" />
+                              <TableColumn fx:id="columnNameBooks" prefWidth="170.39996337890625" text="name" />
+                              <TableColumn fx:id="columnCountBooks" prefWidth="69.5999755859375" text="count" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="buttonNextBooks" layoutX="498.0" layoutY="323.0" mnemonicParsing="false" text="Вперед" />
+                        <Button fx:id="buttonBackBooks" layoutX="32.0" layoutY="323.0" mnemonicParsing="false" text="Назад" visible="false" />
+                        <Label layoutX="81.0" layoutY="11.0" text="Название книги:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textFieldBooks" layoutX="181.0" layoutY="7.0" prefHeight="26.0" prefWidth="240.0" />
+                        <Label layoutX="429.0" layoutY="11.0" text="в конце введите '.'">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonExelBooks" layoutX="274.0" layoutY="323.0" mnemonicParsing="false" text="в Excel" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="BookTypes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableBookTypes" layoutX="-2.0" prefHeight="370.0" prefWidth="600.0">
+                           <columns>
+                              <TableColumn fx:id="columnTypeName" prefWidth="152.00000607967377" text="name" />
+                              <TableColumn fx:id="columnTypeFine" prefWidth="113.5999755859375" text="fine" />
+                              <TableColumn fx:id="columnTypeDayCount" prefWidth="101.5999755859375" text="day_count" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Accept">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="fieldPassportNumAccept" layoutX="226.0" layoutY="124.0" />
+                        <TextField fx:id="fieldBookIdAccept" layoutX="226.0" layoutY="173.0" />
+                        <Label layoutX="256.0" layoutY="106.0" text="Номер паспорта" />
+                        <Label layoutX="280.0" layoutY="155.0" text="id книги" />
+                        <Button fx:id="buttonCalculateFine" layoutX="49.0" layoutY="173.0" mnemonicParsing="false" text="Расчитать штраф" />
+                        <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="121.0" prefHeight="30.0" prefWidth="146.0">
+                           <children>
+                              <Label text="Штраф: " />
+                              <Label fx:id="labelFineSum" text="0 " />
+                              <Label text="руб." />
+                           </children>
+                        </HBox>
+                        <Button fx:id="buttonAccept" layoutX="268.0" layoutY="229.0" mnemonicParsing="false" text="Принять" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Delivery">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="fieldPassportNum" layoutX="226.0" layoutY="124.0" />
+                        <TextField fx:id="fieldBookId" layoutX="226.0" layoutY="173.0" />
+                        <Label layoutX="256.0" layoutY="106.0" text="Номер паспорта" />
+                        <Label layoutX="280.0" layoutY="155.0" text="id книги" />
+                        <Button fx:id="buttonDelivery" layoutX="272.0" layoutY="223.0" mnemonicParsing="false" text="Выдать" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="changBooks">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="fieldNameBook" layoutX="226.0" layoutY="124.0" />
+                        <TextField fx:id="fieldBookCount" layoutX="226.0" layoutY="173.0" />
+                        <Label layoutX="256.0" layoutY="106.0" text="Название книги:" />
+                        <Label layoutX="280.0" layoutY="155.0" text="Кол-во:" />
+                        <Button fx:id="buttonAddBook" layoutX="264.0" layoutY="221.0" mnemonicParsing="false" text="Добавить" />
+                        <CheckBox fx:id="checkBoxBookNew" layoutX="453.0" layoutY="177.0" mnemonicParsing="false" text="Новая" />
+                        <TextField fx:id="fieldBookType" layoutX="446.0" layoutY="137.0" prefHeight="17.0" prefWidth="34.0" visible="false" />
+                        <Label fx:id="labelBookType" layoutX="443.0" layoutY="115.0" text="Тип:" visible="false" />
+                        <Button fx:id="buttonDeleteBook" layoutX="496.0" layoutY="321.0" mnemonicParsing="false" text="Удалить" />
+                        <Button fx:id="buttonUpdateBook" layoutX="39.0" layoutY="321.0" mnemonicParsing="false" text="Обновить" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="changTypes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="fieldNameType" layoutX="87.0" layoutY="102.0" />
+                        <TextField fx:id="fieldFine" layoutX="87.0" layoutY="150.0" />
+                        <Label layoutX="116.0" layoutY="84.0" text="Название типа:" />
+                        <Label layoutX="141.0" layoutY="133.0" text="Штраф:" />
+                        <Button fx:id="buttonAddType" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" text="Добавить" />
+                        <TextField fx:id="fieldBookType1" layoutX="446.0" layoutY="137.0" prefHeight="17.0" prefWidth="34.0" visible="false" />
+                        <Label fx:id="labelBookType1" layoutX="443.0" layoutY="115.0" text="Тип:" visible="false" />
+                        <TextField fx:id="fieldDayCount" layoutX="87.0" layoutY="197.0" />
+                        <Label layoutX="126.0" layoutY="180.0" text="Кол-во дней:" />
+                        <Button fx:id="buttonDeleteType" layoutX="305.0" layoutY="196.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="63.0" text="Удалить" />
+                        <Button fx:id="buttonUpdateType" layoutX="299.0" layoutY="102.0" mnemonicParsing="false" text="Изменить" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="rHistory">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="fieldBookType11" layoutX="446.0" layoutY="137.0" prefHeight="17.0" prefWidth="34.0" visible="false" />
+                        <Label fx:id="labelBookType11" layoutX="443.0" layoutY="115.0" text="Тип:" visible="false" />
+                        <TextArea fx:id="textAreaHistory" prefHeight="372.0" prefWidth="600.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="buttonExit" layoutX="548.0" mnemonicParsing="false" text="Выйти" />
+   </children>
+</AnchorPane>

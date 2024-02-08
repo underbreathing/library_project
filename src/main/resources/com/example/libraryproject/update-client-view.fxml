@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #7d7f7d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.libraryproject.UpdateClientController">
+    <children>
+        <TextField fx:id="fieldFirstName" layoutX="49.0" layoutY="127.0" />
+        <Label layoutX="95.0" layoutY="109.0" text="First Name">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="fieldSecondName" layoutX="49.0" layoutY="200.0" />
+        <Label layoutX="95.0" layoutY="182.0" text="Last Name">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="fieldFatherName" layoutX="49.0" layoutY="276.0" />
+        <TextField fx:id="fieldSeries" layoutX="225.0" layoutY="127.0" />
+        <TextField fx:id="fieldNum" layoutX="225.0" layoutY="200.0" />
+        <Label layoutX="94.0" layoutY="258.0" text="Father Name">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="261.0" layoutY="109.0" text="Passport seria">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="261.0" layoutY="182.0" text="Passport num">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="buttonUpdateUser" layoutX="427.0" layoutY="276.0" mnemonicParsing="false" text="изменить" />
+        <Button fx:id="buttonBackUser" layoutX="29.0" layoutY="41.0" mnemonicParsing="false" text="назад" />
+        <TextField fx:id="fieldLogin" layoutX="411.0" layoutY="127.0" />
+        <TextField fx:id="fieldPassword" layoutX="411.0" layoutY="200.0" />
+        <Label layoutX="470.0" layoutY="109.0" text="login">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="459.0" layoutY="182.0" text="password">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+      <Button fx:id="buttonDeleteAcc" layoutX="427.0" layoutY="332.0" mnemonicParsing="false" text="удалить аккаунт" />
+    </children>
+</AnchorPane>
